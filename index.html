@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<!--stylesheet link-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">
+<link href="index.css" rel="stylesheet" />
+
+<title> RPS</title>
+</head>
+
+<body>
+          <!-- HEADER TEXT-->
+  <div class="div">
+    <p>
+      <span id="rok"> Rock</span>
+      <span id="pap">Paper</span>
+      <span id="sci"> Scissors </span>
+     </p> 
+  </div>
+
+  
+<!-- ROCK PAPER SCISSORS IMAGES AND CONTAINER-->
+
+<div class="container">
+  <button class="rock-bttn">
+    <img class="game-img" src="image/rock.jpg" >
+  </button>
+
+  <button class="paper-bttn">
+    <img class="game-img" src="image/paper.jpg" >
+  </button>
+
+  <button class="scissors-bttn">
+    <img class="game-img" src="image/scissors.jpg" >
+  </button>
+</div>
+
+
+<!--OUTCOME DISPLAY BY JS-->
+
+  <p class="result"></p>
+  <p class="moves"></p>
+  <p class="score"></p>
+
+
+
+<!--Footer button-->
+
+  <button  class="reset-bttn"  onclick="
+      score.wins = 0; 
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score-review');
+      updateScoreElement();
+    "> Reset Score
+  </button>
+
+  <button class="play-bttn" onclick="autoPlay();">Auto Play
+  </button>
+</div>  
+
+
+  <!--js link-->
+<script src="index.js">
+
+</script>
+</html>
+
